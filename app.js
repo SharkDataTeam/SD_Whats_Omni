@@ -87,21 +87,21 @@ client.on('message', async msg => {
       data: msg
     };
 
-    axios.post("https://sharkdesenvolvimento.azurewebsites.net/api/WhatsWeb/Receberheruku", config)
-      .then(res => {
-        console.log(JSON.stringify(res.data));
-      })
-      .catch(err => {
-        console.log("erro: "+ err);
-      })
-
-    /*axios.post("https://sharkproducao.azurewebsites.net/api/WhatsWeb/Receberheruku", config)
+    /*axios.post("https://sharkdesenvolvimento.azurewebsites.net/api/WhatsWeb/Receberheruku", config)
       .then(res => {
         console.log(JSON.stringify(res.data));
       })
       .catch(err => {
         console.log("erro: "+ err);
       })*/
+
+    axios.post("https://sharkproducao.azurewebsites.net/api/WhatsWeb/Receberheruku", config)
+      .then(res => {
+        console.log(JSON.stringify(res.data));
+      })
+      .catch(err => {
+        console.log("erro: "+ err);
+      })
 
     /*axios.post("https://sharktreinamento.azurewebsites.net/api/WhatsWeb/Receberheruku", config)
       .then(res => {
